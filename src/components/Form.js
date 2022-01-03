@@ -1,15 +1,19 @@
 import React, { useState } from "react";
+import Form2 from './Form2';
 
-function Form() {
-  const [firstName, setFirstName] = useState("John");
-  const [lastName, setLastName] = useState("Henry");
-
+function Form(props) {
+ 
   return (
-    <form>
-      <input type="text" value={firstName} />
-      <input type="text" value={lastName} />
-      <button type="submit">Submit</button>
+    
+    <div>
+      <form>
+      firstName={firstName}
+        lastName={lastName}
+        handleFirstNameChange={handleFirstNameChange}
+        handleLastNameChange={handleLastNameChange}
     </form>
+    <Form2 firstName={firstName} lastName={lastName} />
+    </div>
   );
 }
 
